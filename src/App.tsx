@@ -1,10 +1,15 @@
 import React from 'react';
 import logo from './logo.png';
 import './App.css';
-//import {TestTypes} from "types";
+import {TestTypes} from "types";
 
 
 function App() {
+
+  const foobar: TestTypes = {
+    x: 123,
+    y: 'Asia'
+  }
 
   return (
     <div className="App">
