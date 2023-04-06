@@ -1,0 +1,41 @@
+@import '../../_variables';
+
+.form-wrapper {
+  height: 90vh;
+
+  .add-post {
+    width: 50vw;
+    height: 90%;
+    margin: 5rem auto;
+    padding: 2rem 5rem;
+    border: $border;
+    border-radius: $border-radius;
+    overflow: scroll;
+
+      label {
+        display: block;
+        margin-top: 20px;
+        font-size: $small-fs;
+        font-weight: bold;
+        margin-bottom: 25px;
+
+        input {
+          width: fit-content;
+          margin-top: .5rem;
+          padding: .5rem;
+          font-size: $normal-fs;
+        }
+        textarea {
+          width: 100%;
+          margin-top: .5rem;
+        }
+        small {
+          font-size: $x-small-fs;
+          font-weight: normal;
+          font-style: italic;
+        }
+      }
+  }
+}
+
+
