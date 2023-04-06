@@ -1,0 +1,22 @@
+
+header {
+  background-color: #4ac938;
+}
+.head-wrapper {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  .logo {
+    height: 8rem;
+  }
+  input {
+    padding: .5rem;
+  }
+  .btn-search {
+    padding: .5rem;
+    border-radius: .4rem;
+  }
+}

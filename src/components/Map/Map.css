@@ -1,9 +1,0 @@
-.map {
-    height: calc(100vh - 48px);
-}
-.leaflet-container {
-    height: 100%;
-}
-.leaflet-popup-content p {
-    font-size: 1.2rem;
-}
