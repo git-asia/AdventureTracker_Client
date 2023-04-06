@@ -1,22 +1,44 @@
+@import '../../_variables';
 
 header {
+  width: 100vw;
+  padding: 2rem;
   background-color: #4ac938;
-}
-.head-wrapper {
-  position: sticky;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
 
-  .logo {
-    height: 8rem;
-  }
-  input {
-    padding: .5rem;
-  }
-  .btn-search {
-    padding: .5rem;
-    border-radius: .4rem;
+  .head-wrapper {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .link {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 7rem;
+    }
+
+    .title {
+      font-size: xxx-large;
+      color: $secondary-color;
+    }
+
+    .search-add-btn {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        margin-bottom: .7rem;
+        padding: .5rem;
+        font-size: $normal-fs;
+        border-radius: $border-radius;
+      }
+      .btn-search {
+        margin-left: .5rem;
+      }
+    }
   }
 }
