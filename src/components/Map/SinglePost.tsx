@@ -29,6 +29,7 @@ export const SinglePost = (props: Props) => {
         <h2>{post.title}</h2>
         <p>{post.kind}</p>
         <hr/>
-        <a href={post.url} target="_blank" rel="noreferrer">Otwórz mapę</a>
+        {!!post.url && <a href={post.url} target="_blank" rel="noreferrer">Otwórz mapę</a>}
     </>;
 }
+
