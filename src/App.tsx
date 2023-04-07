@@ -3,7 +3,7 @@ import {Map} from "./components/Map/Map";
 import {SearchContext} from "./contex/search.context";
 import {Routes, Route} from 'react-router-dom';
 import {Header} from "./components/Header/Header";
-import {AddPost} from "./components/AddPost/AddPost";
+import MultistepForm from "./components/MultistepForm/MultistepForm";
 
 
 
@@ -14,10 +14,8 @@ export const App = () => {
         <SearchContext.Provider value={{search, setSearch}}>
             <Header/>
             <Routes>
-
                 <Route path="/" element={<Map/>} />
-                <Route path="/add" element={<AddPost/>}/>
-
+                <Route path="/form" element={<MultistepForm/>}/>
             </Routes>
         </SearchContext.Provider>
     );

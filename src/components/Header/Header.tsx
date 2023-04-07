@@ -29,7 +29,7 @@ export const Header = () => {
                         <input type="text" placeholder="Wyszukaj" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
                         <button className="btn-search">Wyszukaj</button>
                     </form>
-                    <Button to="/add" text="Dodaj post"/>
+                    <Button to="/form" text="Dodaj post"/>
                 </div>
 
 
