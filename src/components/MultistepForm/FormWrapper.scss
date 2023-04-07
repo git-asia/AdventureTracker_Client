@@ -1,0 +1,12 @@
+.form-wrapp {
+  h2 {
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+  .form-body {
+    display: grid;
+    gap: 1rem .5rem;
+    justify-content: flex-start;
+    grid-template-columns: auto minmax(auto, 400px);
+  }
+}
