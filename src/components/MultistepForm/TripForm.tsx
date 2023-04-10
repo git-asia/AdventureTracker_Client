@@ -19,7 +19,7 @@ export function TripForm({
                              updateFields,
                          }: TripFormProps) {
     return (
-        <FormWrapper title="Info o wycieczce">
+        <FormWrapper title="Informacje o wycieczce">
             <label>Koordynaty</label>
             <input
                 autoFocus

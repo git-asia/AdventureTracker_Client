@@ -31,8 +31,6 @@ export const Header = () => {
                     </form>
                     <Button to="/form" text="Dodaj post"/>
                 </div>
-
-
             </div>
         </header>
     );

@@ -1,7 +1,8 @@
 import { FormWrapper } from "./FormWrapper";
 
+
 type DescriptionData = {
-    kind: string
+
     tags: string
     description: string
 }
@@ -11,21 +12,14 @@ type DescriptionFormProps = DescriptionData & {
 }
 
 export function DescriptionForm({
-                                kind,
+
                                 tags,
                                 description,
                                 updateFields,
                             }: DescriptionFormProps) {
     return (
         <FormWrapper title="Opis wycieczki">
-            <label>Rodzaj aktywności</label>
-            <input
-                autoFocus
-                required
-                type="text"
-                value={kind}
-                onChange={e => updateFields({ kind: e.target.value })}
-            />
+
             <label>Tagi</label>
             <input
                 type="text"

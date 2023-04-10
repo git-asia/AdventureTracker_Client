@@ -15,11 +15,11 @@ type FormData = {
     title: string
     date: string
     duration: string
-    kind: string
     tags: string
     description: string
     url: string
     iframe: string
+    kind: string
 }
 
 const INITIAL_DATA: FormData = {
@@ -29,9 +29,9 @@ const INITIAL_DATA: FormData = {
     duration: '1',
     tags: '',
     description: '',
-    kind: '',
     url: '',
     iframe: '',
+    kind: '',
 }
 
 function MultistepForm() {
