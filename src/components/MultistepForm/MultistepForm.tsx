@@ -7,6 +7,7 @@ import {geocode} from "../../utils/geocoding";
 import {apiUrl} from "../../config/api";
 
 import './MultistepForm.scss';
+import {Button} from "../common/Button/Button";
 
 
 type FormData = {
@@ -26,9 +27,9 @@ const INITIAL_DATA: FormData = {
     title: '',
     date: '',
     duration: '1',
-    kind: '',
     tags: '',
     description: '',
+    kind: '',
     url: '',
     iframe: '',
 }
@@ -95,6 +96,8 @@ function MultistepForm() {
              <h1>Twoja wycieczka "{data.title}" została dodana do bazy.  </h1><br/>
               <h2> Czekamy na kolejną! </h2>  <br/>
               <p> 🧗‍♂️🏔 🚵‍♀️🏕</p>
+              <br/> <br/>
+             <Button to="/" text="Wróć na stronę główną"/>
         </div>
     }
 
