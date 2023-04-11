@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from "react";
 import {PostEntity} from "types";
 import {apiUrl} from "../../config/api";
+import {Link} from "react-router-dom";
 
 interface Props {
     id: string;
 }
 
-export const SinglePost = (props: Props) => {
+export const SingleMarker = (props: Props) => {
     const [post, setPost] = useState<PostEntity | null>(null);
 
     useEffect(() => {
@@ -26,10 +27,12 @@ export const SinglePost = (props: Props) => {
     }
 
     return <>
-        <h2>{post.title}</h2>
+        <h1>{post.title}</h1>
         <p>{post.kind}</p>
-        <hr/>
-        {!!post.url && <a href={post.url} target="_blank" rel="noreferrer">Otwórz mapę</a>}
+        {!!post.url && <p><a href={post.url} target="_blank" rel="noreferrer">mapy.cz</a></p>}
+        <br/>
+        <Link className="btn view" to={`/post/${props.id}`}> Zobacz
+        </Link>
     </>;
 }
 
