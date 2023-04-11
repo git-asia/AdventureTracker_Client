@@ -5,9 +5,9 @@ import { DescriptionForm } from "./DescriptionForm";
 import { TripForm } from "./TripForm";
 import {geocode} from "../../utils/geocoding";
 import {apiUrl} from "../../config/api";
+import {Button} from "../common/Button/Button";
 
 import './MultistepForm.scss';
-import {Button} from "../common/Button/Button";
 
 
 type FormData = {

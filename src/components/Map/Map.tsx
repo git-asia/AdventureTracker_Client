@@ -1,13 +1,13 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {SearchContext} from "../../contex/search.context";
 import {SimplePostEntity} from "types";
-import {SinglePost} from "./SinglePost";
+import {SingleMarker} from "./SingleMarker";
 import {apiUrl} from "../../config/api";
 
-import './Map.scss';
+import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import '../../utils/fix-map-icon'
-import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet';
+import './Map.scss';
 
 export const Map = () => {
     const {search} = useContext(SearchContext);
@@ -38,7 +38,7 @@ export const Map = () => {
                     posts.map((post =>
                             <Marker key={post.id} position={[post.lat, post.lon]}>
                                 <Popup>
-                                    <SinglePost id={post.id!}/>
+                                    <SingleMarker id={post.id!}/>
                                 </Popup>
                             </Marker>
                     ))
