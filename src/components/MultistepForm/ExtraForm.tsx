@@ -19,8 +19,10 @@ export function ExtraForm({
                                 kind,
                                 updateFields,
                             }: ExtraFormProps) {
+
     return (
         <FormWrapper title="Dodatkowe informacje">
+
             <label>URL</label>
             <input
                 autoFocus
@@ -29,12 +31,14 @@ export function ExtraForm({
                 value={url}
                 onChange={e => updateFields({ url: e.target.value })}
             />
+
             <label>iframe</label>
             <input
                 type="text"
                 value={iframe}
                 onChange={e => updateFields({ iframe: e.target.value })}
             />
+
             <label>Aktywność</label>
             <Select
                 placeholder='Wybierz rodzaj aktywności'

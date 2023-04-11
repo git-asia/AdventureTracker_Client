@@ -26,6 +26,7 @@ export function DescriptionForm({
                 value={tags}
                 onChange={e => updateFields({ tags: e.target.value })}
             />
+
             <label>Opis</label>
             <input
                 required

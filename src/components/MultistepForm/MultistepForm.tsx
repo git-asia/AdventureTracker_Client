@@ -39,6 +39,7 @@ function MultistepForm() {
     const [id, setId] = useState('');
     const [data, setData] = useState(INITIAL_DATA)
 
+
     function updateFields(fields: Partial<FormData>) {
         setData(prev => {
             return { ...prev, ...fields }
@@ -79,7 +80,6 @@ function MultistepForm() {
             if (!isLastStep) return next()
 
             setId(formData.id);
-
 
         } finally {
 

@@ -20,6 +20,7 @@ export function TripForm({
                          }: TripFormProps) {
     return (
         <FormWrapper title="Informacje o wycieczce">
+
             <label>Koordynaty</label>
             <input
                 autoFocus
@@ -28,6 +29,7 @@ export function TripForm({
                 value={coordinates}
                 onChange={e => updateFields({ coordinates: e.target.value })}
             />
+
             <label>Tytuł</label>
             <input
                 required
@@ -35,6 +37,7 @@ export function TripForm({
                 value={title}
                 onChange={e => updateFields({ title: e.target.value })}
             />
+
             <label>Data</label>
             <input
                 required
@@ -42,6 +45,7 @@ export function TripForm({
                 value={date}
                 onChange={e => updateFields({ date: e.target.value })}
             />
+
             <label>Czas trwania (dni)</label>
             <input
                 required
