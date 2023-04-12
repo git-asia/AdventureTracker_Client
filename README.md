@@ -1,3 +1,6 @@
+# Opis projektu znajduje się w RM backendowej części aplikacji
+🔗 https://github.com/git-asia/AdventureTracker_Server/blob/main/README.md
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
