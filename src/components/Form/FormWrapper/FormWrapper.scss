@@ -1,0 +1,36 @@
+@import '../../../variables';
+
+.form-wrapp {
+  h2 {
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+  .form-body {
+    display: grid;
+    gap: 1rem .5rem;
+    justify-content: flex-start;
+    align-items: center;
+    grid-template-columns: auto minmax(auto, 400px);
+
+    input {
+      padding: .2rem .5rem;
+    }
+
+    input[type=date] {
+      width: fit-content;
+    }
+
+    input[type=number] {
+      width: 5rem;
+    }
+
+    label {
+      font-size: $small-fs;
+    }
+    small {
+      margin-top: -1rem;
+      font-size: x-small;
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.error-info {
+  position: relative;
+  max-width: max-content;
+  padding: 2rem;
+  margin: $margin;
+  text-align: center;
+  background: white;
+  border: $err-border;
+  border-radius: $border-radius;
+}

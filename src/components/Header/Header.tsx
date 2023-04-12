@@ -1,9 +1,10 @@
 import React, {SyntheticEvent, useContext, useState} from 'react';
-import {Typography, AppBar, Button} from "@mui/material";
-import Toolbar from "@mui/material/Toolbar";
-import logo200 from "../images/logo200.png";
-import SearchIcon from '@mui/icons-material/Search';
 import {SearchContext} from "../../contex/search.context";
+import {Link} from "react-router-dom";
+import {Button} from "../common/Button/Button";
+import logo200 from "../images/logo200.png";
+
+import './Header.scss';
 
 
 export const Header = () => {
@@ -16,20 +17,22 @@ export const Header = () => {
     }
 
     return (
-        <>
-    <AppBar position="relative">
-        <Toolbar>
-            <img className="logo" src={logo200} alt="icon" height="40" />
-            <Typography variant="h1" color="inherit" noWrap>Adventure Tracker</Typography>
-            <Button color="inherit" endIcon={<SearchIcon color="inherit"/>}>
-            <form className="search" onSubmit={setSearchFromLocalState}>
-                <input type="text" placeholder="Wyszukaj" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
-            </form>
-            </Button>
-            {/*<Btn to="/add" text="Dodaj ogłoszenie"/>*/}
-        </Toolbar>
-    </AppBar>
-        </>
+        <header>
+            <div className="head-wrapper">
+                <Link className="link" to="/">
+                    <img className="logo" src={logo200} alt="icon" />
+                <h1 className="title">Adventure Tracker</h1>
+                </Link>
+
+                <div className="search-add-btn">
+                    <form onSubmit={setSearchFromLocalState}>
+                        <input type="text" placeholder="Wpisz nazwę wycieczki" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
+                        <button className="btn-search">Wyszukaj</button>
+                    </form>
+                    <Button to="/form" text="Dodaj post"/>
+                </div>
+            </div>
+        </header>
     );
 };
 

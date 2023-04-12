@@ -1,0 +1,27 @@
+@import '../../_variables';
+
+.map {
+    height: calc(80vh - 50px);
+    width: 90%;
+    margin: 2rem auto;
+    border: $border;
+    border-radius: .5rem;
+    overflow: hidden;
+
+    .leaflet-container {
+        height: 100%;
+
+        .leaflet-popup-content {
+
+            p {
+                margin: .7rem 0;
+                font-size: $x-small-fs;
+            }
+
+            .view {
+                color: aliceblue;
+                font-size: $x-small-fs;
+            }
+        }
+    }
+}

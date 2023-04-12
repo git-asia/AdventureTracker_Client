@@ -1,0 +1,32 @@
+@import '../../../variables';
+
+.form-page, .success-info {
+  position: relative;
+  max-width: max-content;
+  padding: 2rem;
+  margin: $margin;
+  background: white;
+  border: $border;
+  border-radius: $border-radius;
+
+  .current-step {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    gap: .5rem;
+
+    .submit-btn {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.success-info {
+text-align: center;
+}

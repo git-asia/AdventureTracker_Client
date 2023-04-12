@@ -1,0 +1,30 @@
+@import '../../variables';
+
+.post-wrapper {
+  width: 90vw;
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  margin: $margin;
+  padding: 1rem;
+  border: $border;
+  border-radius: $border-radius;
+
+  .post-info {
+    margin-left: 2rem;
+
+    h1 {
+      margin: 1rem 0;
+    }
+
+    p {
+      margin: .5rem 0;
+      font-size: $normal-fs;
+    }
+  }
+
+  iframe {
+    height: 100%;
+    flex-basis: 70%;
+  }
+}
