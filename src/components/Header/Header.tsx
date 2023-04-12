@@ -1,10 +1,10 @@
 import React, {SyntheticEvent, useContext, useState} from 'react';
 import {SearchContext} from "../../contex/search.context";
 import {Link} from "react-router-dom";
+import {Button} from "../common/Button/Button";
+import logo200 from "../images/logo200.png";
 
 import './Header.scss';
-import logo200 from "../images/logo200.png";
-import {Button} from "../common/Button/Button";
 
 
 export const Header = () => {
@@ -26,7 +26,7 @@ export const Header = () => {
 
                 <div className="search-add-btn">
                     <form onSubmit={setSearchFromLocalState}>
-                        <input type="text" placeholder="Wyszukaj" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
+                        <input type="text" placeholder="Wpisz nazwę wycieczki" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
                         <button className="btn-search">Wyszukaj</button>
                     </form>
                     <Button to="/form" text="Dodaj post"/>

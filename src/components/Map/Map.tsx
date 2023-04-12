@@ -29,7 +29,7 @@ export const Map = () => {
 
     return (
         <div className='map'>
-            <MapContainer center={[51.0451318,20.176074]} zoom={6} >
+            <MapContainer center={[52.0451318,20.176074]} zoom={6} >
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution="&copy; <a href='https://www.openstreetmap.org/opyright'>OpenStreetMap</a> & contributors"
