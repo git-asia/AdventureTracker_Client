@@ -1,4 +1,4 @@
-import { FormWrapper } from "./FormWrapper";
+import { FormWrapper } from "./FormWrapper/FormWrapper";
 
 
 type DescriptionData = {
@@ -27,7 +27,7 @@ export function DescriptionForm({
                 onChange={e => updateFields({ tags: e.target.value })}
             />
 
-            <label>Opis</label>
+            <label>Opis *</label>
             <input
                 required
                 type="text"

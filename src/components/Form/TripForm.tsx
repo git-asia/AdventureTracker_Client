@@ -1,4 +1,4 @@
-import { FormWrapper } from "./FormWrapper";
+import { FormWrapper } from "./FormWrapper/FormWrapper";
 
 type TripData = {
     coordinates: string
@@ -21,16 +21,18 @@ export function TripForm({
     return (
         <FormWrapper title="Informacje o wycieczce">
 
-            <label>Koordynaty</label>
+            <label>Koordynaty *</label>
             <input
                 autoFocus
                 required
                 type="text"
                 value={coordinates}
                 onChange={e => updateFields({ coordinates: e.target.value })}
-            />
+            />  <br/>
+            <small>Wpisz nazwę miejscowości lub podaj współrzędne w układzie WGS84 <br/>
+                (same cyfry, np: 49.1985453, 20.1827653).</small>
 
-            <label>Tytuł</label>
+            <label>Tytuł *</label>
             <input
                 required
                 type="text"
@@ -38,7 +40,7 @@ export function TripForm({
                 onChange={e => updateFields({ title: e.target.value })}
             />
 
-            <label>Data</label>
+            <label>Data *</label>
             <input
                 required
                 type="date"
@@ -46,7 +48,7 @@ export function TripForm({
                 onChange={e => updateFields({ date: e.target.value })}
             />
 
-            <label>Czas trwania (dni)</label>
+            <label>Czas trwania (dni) *</label>
             <input
                 required
                 min={1}

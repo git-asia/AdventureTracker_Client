@@ -1,11 +1,11 @@
 import React, {SyntheticEvent, useState} from "react";
-import { useMultistepForm } from "./useMultistepForm";
-import { ExtraForm } from "./ExtraForm";
-import { DescriptionForm } from "./DescriptionForm";
-import { TripForm } from "./TripForm";
-import {geocode} from "../../utils/geocoding";
-import {apiUrl} from "../../config/api";
-import {Button} from "../common/Button/Button";
+import { useMultistepForm } from "../useMultistepForm";
+import { ExtraForm } from "../ExtraForm/ExtraForm";
+import { DescriptionForm } from "../DescriptionForm";
+import { TripForm } from "../TripForm";
+import {geocode} from "../../../utils/geocoding";
+import {apiUrl} from "../../../config/api";
+import {Button} from "../../common/Button/Button";
 
 import './MultistepForm.scss';
 

@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {PostEntity} from "types";
 import {useParams} from "react-router-dom";
-import {apiUrl} from "../config/api";
+import {apiUrl} from "../../config/api";
 
 import './SinglePostView.scss';
-import {NotFoundView} from "./NotFoundView";
+import {NotFoundView} from "../NotFoundView/NotFoundView";
 
 export const SinglePostView = () => {
     const [postInfo, setPostInfo] = useState<PostEntity | null>(null);

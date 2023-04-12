@@ -1,4 +1,4 @@
-@import '../../_variables';
+@import '../../../variables';
 
 .form-wrapp {
   h2 {
@@ -26,6 +26,11 @@
 
     label {
       font-size: $small-fs;
+    }
+    small {
+      margin-top: -1rem;
+      font-size: x-small;
+      font-style: italic;
     }
   }
 }

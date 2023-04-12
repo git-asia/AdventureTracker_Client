@@ -1,4 +1,4 @@
-import { FormWrapper } from "./FormWrapper";
+import { FormWrapper } from "../FormWrapper/FormWrapper";
 import {Select} from "@chakra-ui/react";
 import './ExtraForm.scss';
 
@@ -23,7 +23,7 @@ export function ExtraForm({
     return (
         <FormWrapper title="Dodatkowe informacje">
 
-            <label>URL</label>
+            <label>URL * </label>
             <input
                 autoFocus
                 required
@@ -37,9 +37,10 @@ export function ExtraForm({
                 type="text"
                 value={iframe}
                 onChange={e => updateFields({ iframe: e.target.value })}
-            />
+            /> <br/>
+            <small>Wstaw tylko atrybut src bez cudzysłowów.</small>
 
-            <label>Aktywność</label>
+            <label>Aktywność * </label>
             <Select
                 placeholder='Wybierz rodzaj aktywności'
                 _placeholder={{ opacity: .5, color: 'gray' }}
