@@ -1,49 +1,121 @@
-# Opis projektu znajduje się w RM backendowej części aplikacji
-🔗 https://github.com/git-asia/AdventureTracker_Server/blob/main/README.md
+# AdventureTracker
 
-# Getting Started with Create React App
+<img width="272" alt="logo" src="https://github.com/git-asia/AdventureTracker_Client/assets/94705253/58dedefc-4e27-4b49-b0ed-ed91c49d820a">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# O aplikacji
 
-In the project directory, you can run:
+Jest to prosta aplikacja desktopowa służąca do zapisywania i przeglądanie odbytych wycieczek. Zawiera podział na rodzaj aktywności: hiking, wspinaczka, alpinizm, via ferrata, rower, kajak, jacht. Po skończeniu pracy nad aplikacją, przeznaczona będzie ona do użytku osobistego.
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Link do backendowej części aplikacji
+🔗 https://github.com/git-asia/AdventureTracker_Server
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Uruchomienie aplikacji lokalnie
 
-### `npm run build`
+- Ściągnij BE (branch main):
+🔗 https://github.com/git-asia/AdventureTracker_Server
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Ściągnij FE (branch main):
+🔗 https://github.com/git-asia/AdventureTracker_Client
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Zainstaluj zależności z package.json:
+`npm i`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Na BE - zamień dane w pliku config.example.ts na istniejącą bazę i zmień nazwę pliku na config.ts
+  
+🔗 plik sql z bazą: https://drive.google.com/file/d/1HnYYzIRe0iR1oTSb0cpuFKn1QJ7WZZig/view?usp=sharing
 
-### `npm run eject`
+- Odpal BE:  `npm start` (localhost:3003)
+- Odpal FE:  `npm start` (localhost:3000)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Demo
+https://jt.networkmanager.pl/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Stack
+- Express.js
+- Node.js
+- TS
+- React
+- sql
+- sass
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
+
+
+# WIP
+
+Aplikacja nie jest jeszcze ukończona...
+
+<br>
+
+## Co udało się wdrożyć:
+- mapa z pinezkami w odpowiedniej lokalizacji
+
+![Home](https://user-images.githubusercontent.com/94705253/231601932-c6e17c7e-1334-4649-a427-c8a45be50d2d.png)
+
+- wyszukiwanie wycieczek po tytule
+
+![Info_z_pinezki](https://user-images.githubusercontent.com/94705253/231602347-3d6bef39-737c-4565-8c22-4cac9453157d.png)
+
+- dodawanie nowych wypraw poprzez 3-stopniowy formularz, poprzez który do bazy przekazywane są informacje:
+	- id: string;  
+	- title: string;  
+	- date: string;  
+	- duration: number;  
+	- kind: string;  
+	- tags: string;  
+	- description: string;  
+	- url: string;  
+	- iframe: string;  (atrybut src)
+	- lat: number;  
+	- lon: number;
+
+![Form_page1](https://user-images.githubusercontent.com/94705253/231602078-0ccafb98-f2a7-46be-8e23-91365c44b81d.png)
+
+![Form_page1_completed](https://user-images.githubusercontent.com/94705253/231602097-9286dd25-3c0d-4bec-91a1-2f06607903d6.png)
+
+![Form_page2](https://user-images.githubusercontent.com/94705253/231602118-39699e0a-30d2-4236-93fb-049b83736976.png)
+
+![Form_page3](https://user-images.githubusercontent.com/94705253/231602123-0becd631-6f51-4e1f-90f6-31912b635672.png)
+
+- powrót na stronę główną po wysłaniu formularza
+  
+![SuccessInfo](https://user-images.githubusercontent.com/94705253/231602182-50f45f9c-1772-45cf-b152-3fe51231f0e1.png)
+
+
+- podgląd pojedynczech postów
+
+![SinglePostView](https://user-images.githubusercontent.com/94705253/231602213-ced5fab6-10d2-496e-8870-58382aa900e9.png)
+
+
+- mapa z trasą wycieczki zagnieżdżona na stronie posta (przekazywana poprzez argument src iframe);
+- obsługa błędnych ścieżek
+
+![NotFoundPage](https://user-images.githubusercontent.com/94705253/231602274-982ef44d-a4e6-4cfc-a893-539f7d96e0aa.png)
+
+
+<br>
+
+
+## @TODO
+- wyświetlenie wszystkich postów;
+- rejestracja i logowanie (Nest.js)
+- dodawanie zdjęć do postów;
+- zmiana mapy na mapbox;
+- wyszukiwanie po #tagach i po rodzaju aktywności;
+- panel - losowe wyprawy w prawej części strony głównej;
+- możliwość edycji postów;
+- może jakaś biblioteka do stylowania (np. MUI)
+
+
