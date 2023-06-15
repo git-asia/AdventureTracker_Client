@@ -40,7 +40,7 @@ export const SinglePostView = () => {
                 <p><strong>Tagi: </strong>{postInfo.tags}</p>
                 <p><strong>Opis:</strong> {postInfo.description}</p>
                 <br/>
-                <p><a href={postInfo.url} target="_blank">Link do mapy</a></p>
+                <p><a href={postInfo.url} target="_blank" rel="noreferrer">Link do mapy</a></p>
             </div>
             <iframe src={postInfo.iframe}></iframe>
         </div>
