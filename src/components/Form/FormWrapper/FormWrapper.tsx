@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-
+import React, { ReactNode } from 'react';
 import './FormWrapper.scss';
+
 
 type FormWrapperProps = {
     title: string
@@ -8,14 +8,14 @@ type FormWrapperProps = {
 }
 
 export function FormWrapper({ title, children }: FormWrapperProps) {
-    return (
-        <div className="form-wrapp">
-            <h2>
-                {title}
-            </h2>
-            <div className="form-body">
-                {children}
-            </div>
-        </div>
-    )
+	return (
+		<div className="form-wrapp">
+			<h2>
+				{title}
+			</h2>
+			<div className="form-body">
+				{children}
+			</div>
+		</div>
+	);
 }

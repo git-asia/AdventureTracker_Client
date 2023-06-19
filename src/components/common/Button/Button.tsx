@@ -1,7 +1,6 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-
-import './Button.scss'
+import { Link } from 'react-router-dom';
+import './Button.scss';
 
 interface Props {
     text: string;
@@ -9,7 +8,7 @@ interface Props {
 }
 
 export const Button = (props: Props) => (
-    props.to
-        ? <Link className="btn" to={props.to}>{props.text}</Link>
-        : <button>{props.text}</button>
+	props.to
+		? <Link className="btn" to={props.to}>{props.text}</Link>
+		: <button>{props.text}</button>
 );

@@ -1,4 +1,5 @@
-import { FormWrapper } from "./FormWrapper/FormWrapper";
+import React from 'react';
+import { FormWrapper } from './FormWrapper/FormWrapper';
 
 
 type DescriptionData = {
@@ -13,27 +14,27 @@ type DescriptionFormProps = DescriptionData & {
 
 export function DescriptionForm({
 
-                                tags,
-                                description,
-                                updateFields,
-                            }: DescriptionFormProps) {
-    return (
-        <FormWrapper title="Opis wycieczki">
+	tags,
+	description,
+	updateFields,
+}: DescriptionFormProps) {
+	return (
+		<FormWrapper title="Opis wycieczki">
 
-            <label>Tagi</label>
-            <input
-                type="text"
-                value={tags}
-                onChange={e => updateFields({ tags: e.target.value })}
-            />
+			<label>Tagi</label>
+			<input
+				type="text"
+				value={tags}
+				onChange={e => updateFields({ tags: e.target.value })}
+			/>
 
-            <label>Opis *</label>
-            <input
-                required
-                type="text"
-                value={description}
-                onChange={e => updateFields({ description: e.target.value })}
-            />
-        </FormWrapper>
-    )
+			<label>Opis *</label>
+			<input
+				required
+				type="text"
+				value={description}
+				onChange={e => updateFields({ description: e.target.value })}
+			/>
+		</FormWrapper>
+	);
 }
